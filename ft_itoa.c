@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 09:03:01 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/06 09:37:23 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/06 12:11:29 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ int	numlen(int nb)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
+	nb /= 10;
 	while (nb)
 	{
-		nb /= 10;
 		i++;
+		nb /= 10;
 	}
 	return (i);
 }
@@ -39,9 +40,11 @@ char	*ft_itoa(int n)
 	if (!tab)
 		return (NULL);
 	tab[len] = '\0';
-	while (nb)
+	while (len >= 0)
 	{
 		tab[--len] = nb % 10 + '0';
+		if (nb == 0)
+			break ;
 		nb /= 10;
 	}
 	if (n < 0)

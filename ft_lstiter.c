@@ -6,17 +6,17 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:26:11 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/05 10:29:24 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/06 11:01:32 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    while(lst)
-    {
-        f((lst) -> content);
-        lst = lst -> next;
-    }
+	while (lst)
+	{
+		f (lst-> content);
+		lst = lst-> next;
+	}
 }

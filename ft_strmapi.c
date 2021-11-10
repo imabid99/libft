@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:45:03 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/06 09:14:32 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/06 10:44:30 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!(s) || !(f))
 		return (0);
-	lenght = strlen(s);
+	lenght = ft_strlen(s);
 	tab = malloc(lenght + 1);
 	if (!tab)
 		return (0);

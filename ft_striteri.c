@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:27:07 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/05 17:31:18 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/06 11:16:43 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
-	
+
 	i = 0;
-	if(s)
+	if (s)
 	{
 		while (s[i])
 		{
-			f(i, &s[i]);
+			f (i, &s[i]);
 			i++;
 		}
 	}

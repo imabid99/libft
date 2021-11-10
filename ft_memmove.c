@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:47:12 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/05 17:17:35 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/06 12:01:15 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*dest;
 	unsigned char	*srcc;
 
-	i = 0;
+	i = -1;
 	if (!dst && !src)
 		return (NULL);
 	dest = (unsigned char *)dst;
@@ -32,10 +32,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	else
-		while (i < len)
-		{
+		while (++i < len)
 			dest[i] = srcc[i];
-			i++;
-		}
 	return (dest);
 }

@@ -6,13 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:48:22 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/10 17:22:05 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/11 12:18:39 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_sep(char sep, char c)
+static int	is_sep(char sep, char c)
 {
 	if (sep == '\0')
 		return (1);
@@ -21,7 +21,7 @@ int	is_sep(char sep, char c)
 	return (0);
 }
 
-int	count_words(char const *str, char c)
+static int	count_words(char const *str, char c)
 {
 	int	i;
 	int	words;
@@ -38,7 +38,7 @@ int	count_words(char const *str, char c)
 	return (words);
 }
 
-void	ft_copy_word(char *dest, char const *from, char c)
+static void	ft_copy_word(char *dest, char const *from, char c)
 {
 	int	i;
 
@@ -51,7 +51,7 @@ void	ft_copy_word(char *dest, char const *from, char c)
 	dest[i] = '\0';
 }
 
-int	ft_move_to_tab(char **tab, char const *s, char c)
+static int	ft_move_to_tab(char **tab, char const *s, char c)
 {
 	int	i;
 	int	j;

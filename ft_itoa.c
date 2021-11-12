@@ -6,13 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 09:03:01 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/06 12:11:29 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/11 10:31:56 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	numlen(int nb)
+static int	numlen(int nb)
 {
 	int	i;
 

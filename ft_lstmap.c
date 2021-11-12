@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:31:37 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/06 11:17:38 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/11 10:35:23 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,24 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list;
+	t_list		*head;
+	t_list		*node;
+	t_list		*temp;
 
-	new_list = (t_list *)malloc(sizeof(t_list));
-	if (!new_list)
+	if (!lst)
 		return (NULL);
-	while (lst)
+	head = NULL;
+	temp = lst;
+	while (temp)
 	{
-		f (lst-> content);
-		lst = lst-> next;
-		del (lst-> content);
+		node = ft_lstnew(f(temp->content));
+		if (!node)
+		{
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&head, node);
+		temp = temp->next;
 	}
-	new_list = lst;
-	return (new_list);
+	return (head);
 }

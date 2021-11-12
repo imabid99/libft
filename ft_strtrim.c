@@ -6,13 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 09:53:27 by imabid            #+#    #+#             */
-/*   Updated: 2021/11/10 18:21:01 by imabid           ###   ########.fr       */
+/*   Updated: 2021/11/11 10:32:21 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ishere(char c, char const *str)
+static int	ishere(char c, char const *str)
 {
 	int	i;
 
